@@ -24,6 +24,5 @@ recente == "sim"
 );
 
 
-
 console.log("==RESULTADO DA TRIAGEM==");
-console.log("Pode doar sangue?", resultado)
+console.log("Pode doar sangue?", resultado);

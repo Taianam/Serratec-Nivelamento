@@ -5,13 +5,25 @@
 
 const ler = require("prompt-sync")();
 
-const anoAtual = 2021;
-var anoNascimento = ler("Em que ano você nasceu ?");
-var temDoençaFigado = ler("Você já teve doença de fígado ?");
-var ultimaDoacaoSuperiorTresMeses = ler("Caso, já tenha doado sangue, faz mais de 3 meses ?");
+console.log("====BANCO DE SANGUE====");
+console.log("Digite 'sim' ou 'não' nas restrições a seguir");
 
-var idade = anoAtual - anoNascimento;
+var idade= ler("Você está abaixo de 16 ou acima de 69 anos: ");
+var peso=ler("Pesa menos de 50kg:");
+var hepatite= ler("Portador de Hepatite:");
+var malaria=ler("Já teve Malária: ");
+var recente=ler("fez doação recente: ");
 
-var resultado = idade >= 18 && temDoençaFigado === "nao" && ultimaDoacaoSuperiorTresMeses === "sim";
 
-console.log("Pode doar sangue ?" , resultado);
+var resultado = !(
+idade == "sim" ||
+peso == "sim" ||
+hepatite == "sim" ||
+malaria == "sim" ||
+recente == "sim"
+);
+
+
+
+console.log("==RESULTADO DA TRIAGEM==");
+console.log("Pode doar sangue?", resultado)

@@ -26,3 +26,14 @@ recente == "sim"
 
 console.log("==RESULTADO DA TRIAGEM==");
 console.log("Pode doar sangue?", resultado);
+
+var porque= ""
+
+if (idade == "sim") porque = "Abaixo ou acima da idade";
+if (peso== "sim") porque += ", infelizmente está abaixo do peso";
+if (hepatite == "sim") porque += ", infelizmente você já teve Hepatite";
+if ( malaria == "sim") porque += ", infelizmente você já teve Malaria";
+if ( recente == "sim") porque += ", Você fez uma doação recente";
+
+
+console.log("Motivo: ", porque);
